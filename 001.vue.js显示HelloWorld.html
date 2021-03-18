@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title></title>
-		
 	</head>
-	<body>
-		<li id="app"> 周二第1节的上课教室是{{lesson}}</li>
+	<body >
+		
+		<!-- 参数的传递 -->
+		<div id="app">{{message}}</div>
+		
+		<!-- 引入Vue.js脚本 -->
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- 创建自定义脚本 -->
 		<script type="text/javascript">
-			var v=new Vue({
+			let v=new Vue({
 				el:'#app',
 				data:{
-					lesson:'L404'
+					message:'Hello world !'
 				}
 			})
 		</script>
+		
+		
 	</body>
 </html>
