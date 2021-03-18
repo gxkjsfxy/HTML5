@@ -1,0 +1,24 @@
+<!--显示一个随机数-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			随机数字：{{keyNum}}
+
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					keyNum:Math.ceil(Math.random()*10)
+				}
+			})
+		</script>
+	</body>
+</html>
