@@ -24,11 +24,9 @@
 ```
 
 ---  
-Canvas画布→002.html：https://gxkjsfxy.github.io/html5/002.html
+Canvas画布→002.html：https://gxkjsfxy.github.io/html5/002.canvas.html
 ---   
-数据双向绑定v-model→011.html：https://gxkjsfxy.github.io/html5/011.html
+数据双向绑定v-model→011.html：https://gxkjsfxy.github.io/html5/011.v-model.html
 --- 
 
-猜数字小游戏→013.html：https://gxkjsfxy.github.io/html5/013.html
----  
 
