@@ -9,8 +9,8 @@
 	<body>
 		
 		<div id="app">
-			你的分数是：{{myScore}}
-
+			你输入的值为：{{myValue}}
+			<br>
 			<input type="text" v-model="myScore" name="" id="" value="" />
 		</div>
 		
@@ -20,7 +20,7 @@
 			let v=new Vue({
 				el:'#app',
 				data:{
-					myScore:''
+					myValue:''
 				}
 			})
 		</script>
