@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{red1}}<br>{{red2}}
+			<button type="button" v-on:click="
+			red1=Math.floor(Math.random()*33);red2=Math.floor(Math.random()*33)">
+			
+			运行</button>
+			
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					red1:'',
+					red2:''
+				},
+				created:function(){
+					console.log("显示一行文字")
+				}
+			})
+		</script>
+	</body>
+</html>
