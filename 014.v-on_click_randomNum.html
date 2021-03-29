@@ -7,9 +7,8 @@
 	</head>
 	<body>
 		<div id="app">
-			{{red1}}<br>{{red2}}
-			<button type="button" v-on:click="
-			red1=Math.floor(Math.random()*33);red2=Math.floor(Math.random()*33)">
+			{{x}}<br>{{y}}<br>{{z}}
+			<button type="button" v-on:click="x=Math.floor(Math.random()*10);y=Math.floor(Math.random()*10);z=Math.floor(Math.random()*10);">
 			
 			运行</button>
 			
@@ -18,21 +17,12 @@
 			let v=new Vue({
 				el:'#app',
 				data:{
-					red1:'',
-					red2:''
-				},
-				created:function(){
-					console.log("显示一行文字")
+					x:'',
+					y:'',
+					z:''
 				}
 			})
 		</script>
 	</body>
 </html>
 
-
-
-```
-<!-- 缩写 -->
-<a @click="doSomething">...</a>
-
-```
