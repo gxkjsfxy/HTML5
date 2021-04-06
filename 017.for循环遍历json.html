@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{msg}}
+			<li v-for="fruit in fruits">{{fruit.name}}</li>
+			{{food[0]}}
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					msg:'下面是一组json数据',
+					fruits:[
+						{name:'芒果'},
+						{name:'草莓'},
+						{name:'西瓜'}
+					],
+					food:['1s',2,30,40]
+				}
+			})
+		</script>
+	</body>
+</html>
