@@ -8,50 +8,40 @@
 	<body>
 		<canvas id="myCanvas" width="800" height="600"></canvas>
 		<div id="app">
-			<input type="text" v-model="userString" @click="show()" @keyup="show()" name="" id="" value="" />
+			<input type="text" @click="show()" @keyup="show()" v-model="userString" name="" id="" value="" />
 		</div>
 		<script type="text/javascript">
 			let v=new Vue({
 				el:"#app",
 				data:{
-					userString:"",
-					foot:0
+					userString:""
 				},
 				methods:{
 					show(){
-						// 判断用户输入的字符串
 						console.log(this.userString);
-						
+						// 加载背景
 						let canvas=document.getElementById("myCanvas");
-						let context=canvas.getContext("2d");
-						// 显示背景
-						let img_background=new Image();
-						img_background.src="./img/background.gif";
-						// 显示青蛙
-						let img_frog=new Image();
-						img_frog.src="./img/frog.gif";
-						// 清空画布
-						context.clearRect(0,0,800,600);
-						// 加载图片
-						img_background.onload=function(){
-							context.drawImage(img_background,0,0);
-							
-						}
-						img_frog.onload=function(){
-							
-							context.drawImage(img_frog,250,300);
-							
-						}
-						if(this.userString=="hello"){
-							img_frog.onload=function(){
-								
-								context.drawImage(img_frog,100,200);
-								
-							}
-							this.userString="";
-						}
-						
-						
+						let context= canvas.getContext("2d");
+						 let img_background=new Image();
+						 img_background.src="./img/background.gif";
+						 img_background.onload=function(){
+							 context.drawImage(img_background,0,0);
+						 }
+						 
+						 // 显示青蛙
+						 let img_frog=new Image();
+						 img_frog.src="./img/frog.gif";
+						 img_frog.onload=function(){
+						 	 context.drawImage(img_frog,400,400);
+						 }
+						 
+						 // 条件判断
+						 if(this.userString=="hello"){
+							 this.userString="";
+							 img_frog.onload=function(){
+							 	 context.drawImage(img_frog,200,250);
+							 }
+						 }
 					}
 				}
 			})
